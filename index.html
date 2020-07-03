@@ -4,11 +4,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Mono:wght@500&display=swap');
+
+        body {
+            margin: 0;
+            background-color: #ececec;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        a {
+            color: #444;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #111;
+        }
+
+        .nav {
+            background-color: #fff;
+            min-height: 40px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 1px 5px #00000085;
+            position: relative;
+        }
+
+        .nav>span {
+            font-size: 30px;
+            font-family: 'Anton', sans-serif;
+        }
+
+        .nav .icons {
+            position: absolute;
+            right: 10px;
+        }
+
+        .nav .icons i {
+            font-size: 35px;
+            margin: 0 5px;
+        }
+
+        .container {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .presentation>h1 {
+            padding-bottom: 20px;
+            border-bottom: solid 1px black;
+        }
+
+        .presentation>p {
+            font-size: 20px;
+        }
+
+        .projects {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+
+        .projects>a {
+            padding: 3px 0;
+        }
+    </style>
+
     <title>Projetos</title>
 </head>
 
 <body>
-    <h1>Lista de Apps</h1>
+    <div class="nav">
+        <span>MarceloEsc</span>
+        <div class="icons">
+            <a href="https://github.com/MarceloEsc/" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/marcelo-escobar-junior-551187198/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="presentation">
+            <h1>Desafio 30 apps em 30 dias</h1>
+            <span>Começado em 22/06/20</span>
+            <p>A cada dia a lista será atualizada.</p>
+            <p>E após o final do desafio irei revisitar e refatorar os apps que eu achar necessário.</p>
+        </div>
+        <div class="projects">
+        </div>
+    </div>
+
+    <script>
+        const projects = [
+            { name: "Notes app", link: "notes app" },
+            { name: "Expense Tracker", link: "Expense Tracker" },
+            { name: "Sorting Algorithms", link: "SortAlgoVisu" },
+            { name: "Jogo digitar", link: "jogo-digitar" },
+            { name: "Password generator", link: "password generator" },
+            { name: "php PDO API", link: "https://github.com/MarceloEsc/30-apps-30-dias/tree/master/phpAPI-PDO" },
+            { name: "Pokedex", link: "pokedex" },
+            { name: "React Todo", link: "https://github.com/MarceloEsc/30-apps-30-dias/tree/master/react-todo" },
+            { name: "Vue Todo", link: "todo-vue/dist" },
+            { name: "Tetris js", link: "tetris js" },
+            { name: "Theme toggler", link: "theme toggler" },
+        ]
+
+        projects.map(({ name, link }) => {
+            let aLink = document.createElement('a')
+            aLink.setAttribute('href', link)
+            aLink.innerHTML = name
+
+            document.querySelector('.projects').append(aLink)
+        })
+    </script>
 </body>
 
 </html>
