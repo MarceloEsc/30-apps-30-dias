@@ -1,0 +1,169 @@
+body {
+	background: #efefbb;
+	background: linear-gradient(to right, #c5e6ec, #efbbe6);
+	color: white;
+	margin: 0;
+	font-family: rubik;
+}
+
+.container {
+	padding: 40px;
+	margin: 0 auto;
+}
+
+h1 {
+	text-align: center;
+	font-size: 54px;
+}
+
+.pokedex {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	grid-gap: 20px;
+	padding-inline-start: 0;
+}
+
+.card {
+	list-style: none;
+	padding: 40px;
+	color: #222;
+	text-align: center;
+	border-radius: 20px;
+	position: relative;
+	box-shadow: 0 1px 6px #00000077;
+	cursor: pointer;
+}
+
+.card::after {
+	content: "";
+	display: block;
+	width: 50%;
+	height: 45%;
+	border-radius: 100%;
+	background-color: #fff;
+	opacity: .7;
+	position: absolute;
+	top: 15%;
+	left: 25%;
+}
+
+.steel {
+	background-color: #e7e7e7;
+}
+
+.fire {
+	background-color: #ffc7a1;
+}
+
+.grass {
+	background-color: #d1fdd4;
+}
+
+.electric {
+	background-color: #ffed93;
+}
+
+.water{
+	background-color: #ccefff;
+}
+
+.ice {
+	background-color: #e8f8ff;
+}
+
+.ground {
+	background-color: #ebcb90;
+}
+
+.rock {
+	background-color: #c9c370;
+}
+
+.fairy {
+	background-color: #fdcaec;
+}
+
+.poison {
+	background-color: #be98d7;
+}
+
+.bug {
+	background-color: #c2f8a3;
+}
+
+.dragon {
+	background-color: #97b0e6;
+}
+
+.psychic {
+	background-color: #eaeda1;
+}
+
+.ghost {
+	background-color: #997dce;
+}
+
+.dark {
+	background-color: #a29baf;
+}
+
+.flying {
+	background-color: #f5f5f5;
+}
+
+.fighting {
+	background-color: #ec9b9b;
+}
+
+.normal {
+	background-color: #f5f5f5;
+}
+
+/* .card:hover {
+	animation: bounce 0.5s linear;
+} */
+
+.card-title {
+	text-transform: capitalize;
+	margin-bottom: 0px;
+	font-size: 32px;
+	font-weight: normal;
+	position: relative;
+	z-index: 2;
+}
+
+.card-subtitle {
+	margin-top: 5px;
+	color: #666;
+	font-size: 25px;
+	font-weight: lighter;
+	position: relative;
+	z-index: 2;
+}
+
+.card-image {
+	height: 180px;
+	position: relative;
+	z-index: 2;
+}
+
+.card-image:hover {
+	animation: bounce 0.5s linear;
+
+}
+
+@keyframes bounce {
+	20% {
+		transform: translateY(-6px);
+	}
+	40% {
+		transform: translateY(0px);
+	}
+
+	80% {
+		transform: translateY(-2px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternador de Tema</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light">
+    <h1>Alternar tema</h1>
+
+    <select id="theme">
+        <option value="light">Claro</option>
+        <option value="dark">Escuro</option>
+    </select>
+
+    <h2>Seu tema é: <span id="result">Claro</span></h2>
+
+    <script>
+        const body = document.querySelector('body');
+        const themeSelect = document.querySelector('#theme');
+        const result = document.querySelector('#result');
+        let isDarkTheme
+
+        
+        const setThemeIntoDOM = () => {
+            const theme = localStorage.getItem('theme')
+            isDarkTheme = theme === 'dark'
+            console.log(isDarkTheme);
+            
+            if(isDarkTheme){
+                body.classList.replace('light', 'dark');
+                themeSelect.value = theme;
+                result.innerHTML = 'Escuro'
+            }
+        }
+        setThemeIntoDOM();
+
+        const saveTheme = () => {
+            isDarkTheme = themeSelect.value === 'dark'
+
+            if(isDarkTheme) {
+                body.classList.replace('light', 'dark');
+                result.innerHTML = 'Escuro'
+            }
+            else {
+                body.classList.replace('dark', 'light');
+                result.innerHTML = 'Claro'
+            }
+
+            localStorage.setItem('theme', themeSelect.value);
+        }
+
+        themeSelect.onchange = () => saveTheme()
+    </script>
+</body>
+</html>

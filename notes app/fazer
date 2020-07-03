@@ -1,0 +1,11 @@
+editor:
+	titulo, texto
+	opção de salvar
+	opção de excluir se for um existente
+	opção de favoritar se for um existente
+
+quadro de notas:
+	pesquisar por titulo
+	filtrar favoritos
+	modo apagar
+	

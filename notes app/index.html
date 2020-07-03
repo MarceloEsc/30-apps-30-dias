@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloco de Notas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>Bloco de Notas</h2>
+    <div class="editor-container">
+        <div class="editor-icons">
+            <div class="icon" id="new"><i class="far fa-file"></i></div>
+            <div class="icon" id="save"><i class="far fa-save"></i></div>
+            <div class="icon" id="download"><i class="fas fa-download"></i></div>
+            <div class="icon" id="delete"><i class="far fa-trash-alt"></i></div>
+        </div>
+        <input type="text" id="title" placeholder="Titulo">
+        <textarea id="body" placeholder="Texto"></textarea>
+    </div>
+
+    <div class="favorites-container">
+        <div class="nav">
+            <div class="icon favorites"><i class="far fa-star"></i></div>
+            <div class="icon delete-favorites"><i class="far fa-trash-alt"></i></div>
+            <div class="icon hidden" id="confirm_delete"><i class="fas fa-check"></i></div>
+            <div class="search-container">
+                <input type="text" id="title_search" placeholder="Pesquisar...">
+            </div>
+        </div>
+        <div class="notes"></div>
+    </div>
+
+    <script src="FileSaver.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
