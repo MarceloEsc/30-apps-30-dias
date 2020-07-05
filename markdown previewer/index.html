@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="./manifest.json">
+    <title>Visualizador Markdown</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./github.markdown.css">
+</head>
+
+<body>
+    <div class="nav">
+        <span>Visualizador Markdown</span>
+    </div>
+
+    <div class="container">
+        <div class="editor">
+            <div class="options">
+                <button id="clear"><i class="far fa-trash-alt"></i> Apagar</button>
+                <button id="copy"><i class="far fa-file"></i> Copiar</button>
+                <button id="download"><i class="far fa-save"></i> Baixar</button>
+            </div>
+            <textarea id="markdown" placeholder="Seu # Markdown aqui..."></textarea>
+        </div>
+
+        <div class="markdown-body">
+            <span>Conversão ao vivo:</span>
+            <div id="resultado"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            Feito com <a href="https://github.com/markedjs/marked" target="_blank">Marked</a> e
+            <a href="https://github.com/sindresorhus/github-markdown-css" target="_blank">Github Markdown</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="./FileSaver.js"></script>
+    <script src="./app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./worker.js')
+                .then(() => console.log('service worker registered'))
+                .catch(() => console.warn('service worker failed'));
+        }
+    </script>
+    <script src="./worker.js"></script>
+</body>
+
+</html>
