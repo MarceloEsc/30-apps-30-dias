@@ -36,7 +36,9 @@ body {
     grid-template-columns: 50% 50%;
 }
 
-.editor {
+.editor,.markdown-body {
+    width: 100%;
+    max-width: 100%;
     padding: 20px;
 }
 
@@ -61,10 +63,6 @@ body {
     outline: none;
 }
 
-.markdown-body {
-    padding: 20px;
-}
-
 .markdown-body span {
     padding: 5px;
     font-size: 20px;
@@ -73,15 +71,14 @@ body {
 .markdown-body div {
     background-color: #fff;
     height: 90%;
-    max-height: 736px;
     width: 100%;
-    max-width: 578px;
     padding: 10px;
     margin-top: 16px;
     border: none;
     resize: none;
     outline: none;
     overflow: auto;
+    word-break: break-all;
 }
 
 footer {

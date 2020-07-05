@@ -4,11 +4,17 @@
     "theme_color": "#ececec",
     "background_color": "#ececec",
     "display": "standalone",
-    "start_url": "/",
+    "start_url": "./",
+    "scope": "./",
     "icons": [
         {
-            "src": "images/icon-72x72.png",
+            "src": "images/icon72.png",
             "sizes": "72x72",
+            "type": "image/png"
+        },
+        {
+            "src": "images/icon144.png",
+            "sizes": "144x144",
             "type": "image/png"
         }
     ]
