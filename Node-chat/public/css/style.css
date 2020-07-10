@@ -123,9 +123,11 @@ a {
 }
 
 .join-container {
-	max-width: 500px;
-	margin: 80px auto;
+	max-width: 600px;
+	margin: auto;
 	color: #fff;
+	-ms-transform: translateY(50%);
+  transform: translateY(50%);
 }
 
 .join-header {
