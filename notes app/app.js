@@ -46,7 +46,7 @@ downloadNote.onclick = () => {
 
     if (!titleToDownload || !textToDownload) return alert('Escreva algo para baixar')
 
-    downloadFile(titleToDownload, textToDownload)
+    downloadFile(textToDownload, titleToDownload)
 }
 
 deleteNote.onclick = () => deleteCurrentNote(currentNote.id)
