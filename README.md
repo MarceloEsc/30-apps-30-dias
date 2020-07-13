@@ -4,4 +4,4 @@
 
 O objetivo desse desafio é **aumentar a criatividade e consolidar** meus conhecimentos das tecnologias usadas em cada aplicação, e compartilhar os resultados com a comunidade, principalmente para os iniciantes.
 
-Sugestões, dicas e reportagem de erros sobre os apps são muito bem vindos.
+Sugestões, dicas e reportar erros sobre os apps são muito bem vindos.
