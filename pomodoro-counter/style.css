@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Ubuntu', sans-serif;
+    overflow: hidden;
+}
+
+.container, .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
+    background-color: #eee;
+    padding: 10px;
+    font-size: 40px;
+    box-shadow: 0 0 5px #00000070;
+}
+
+.container {
+    height: calc(100vh - 67px);
+}
+
+.container #timer {
+    margin: 100px 0;
+    font-size: 100px;
+}
+
+button {
+    padding: 10px;
+    border: 0;
+    font-size: larger;
+    cursor: pointer;
+    outline: none;
+}
+
+.active {
+    color: #fff;
+    background-color: #6d6d6d;
+}
+
+.start {
+    background-color: #74e687;
+}
+
+.pause {
+    background-color: #e67474;
+}
+
+.reset {
+    background-color: #dadada;
+}
+
+@media screen and (max-width: 400px) {
+    .btn-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn-container>button {
+        margin: 3px 0;
+    }
+
+    .container #timer {
+        margin: 30px 0;
+        font-size: 100px;
+    }
+}
