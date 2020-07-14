@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+textarea {
+    width: 80%;
+    min-height: 200px;
+    background-color: #f8f8f8;
+    padding: 10px;
+    border: 0;
+    border-radius: 3px;
+    box-shadow: 0 0 5px #aaa;
+    resize: none;
+}
+
+textarea:focus {
+    outline: #00000059 auto 1px;
+}
+
+.nav {
+    background-color: #f8f8f8;
+    padding: 25px;
+    font-size: 25px;
+    text-align: center;
+    box-shadow: 0 0 10px #4444446e;
+}
+
+.container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+
+button {
+    background-color: #fff;
+    padding: 10px;
+    margin: 20px;
+    border: 0;
+    border-radius: 3px;
+    box-shadow: 0 0 8px #aaa;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+button:focus {
+    background-color: #eee;
+    outline: #00000059 auto 1px;
+}
+
+table {
+    border-spacing: 10px;
+    font-size: 20px;
+}
